@@ -1,0 +1,169 @@
+/* 반응형 대비 최소제한 너비 설정 */
+header, main {min-width: 900px;}
+/* header */
+body {background: #F8F8F8;}
+header {
+    background-color: #F8F8F8;
+    position: fixed; left: 0; top: 0;
+    width: 100%; z-index: 999;
+    display: flex;
+    padding: 32px 60px 0px 60px;
+}
+header nav {
+    width: 100%;
+    padding: 12px 0;
+    border: 2px solid #000;
+    border-left: 0; border-right: 0;
+    display: flex; flex-flow: nowrap;
+    justify-content: space-between;
+}
+header nav .gnb {}
+header nav .gnb a {
+    margin-right: 40px;
+    letter-spacing: -0.02em; font-size: 1.25rem;
+    transition: color 0.3s;
+}
+header nav .gnb a:last-child {margin-right: 0;}
+header nav .gnb a:hover {
+    color: #4E4FEB;
+}
+header nav .sns {}
+header nav .sns span {
+    letter-spacing: -0.02em; font-size: 1.25rem;
+}
+/* 1. home */
+main {}
+main > * {padding: 0 60px;}
+main #home {height: 100vh; text-align: center;}
+main #home h1 {padding-top: 279px;}
+main #home h1 img {}
+main #home .mouse {
+    position: absolute; left: 50%; bottom: 60px;
+    transform: translateX(-50%);
+}
+main #home .mouse img {
+    animation: mousemove 1s linear infinite alternate;
+}
+@keyframes mousemove {
+    0% {transform: translateY(-10px);}
+    100% {transform: translateY(10px);}
+}
+/* 2.Skill */
+main #skills {}
+main #skills h1 {
+    font-size: 2.5rem; font-weight: 700;
+    padding: 50px 0 80px 0;
+}
+main #skills .container {}
+main #skills .container ul {
+        /* 스킬 9개 수직 줄바꿈으로 배치하는 flex */
+    display: flex; flex-flow: column wrap;
+    height: 800px;
+}
+main #skills .container ul li {
+    /* 아이콘 글자 옆으로 배치하는 flex */
+    display: flex; flex-flow: row nowrap;
+    width: calc(50% - 60px /2); margin-bottom: 70px;
+}
+main #skills .container ul li:nth-child(odd) {
+    margin-right: 60px;
+}
+main #skills .container ul li .icon {margin-right: 64px;}
+main #skills .container ul li .icon img {}
+main #skills .container ul li .contents {
+    display: flex; flex-flow: column nowrap;
+    justify-content: space-between;
+}
+main #skills .container ul li .contents .title {
+    font-weight: 500;
+    letter-spacing: -0.02em; font-size: 1.25rem;
+}
+main #skills .container ul li .contents .txt {
+    letter-spacing: -0.02em; font-size: 1.25rem;
+    font-weight: 300; line-height: 28px;
+}
+/* 3. info */
+main #info {
+    display: flex; flex-flow: row nowrap;
+    /* max-width: calc(100% - 140px); */
+    width: 1440px; height: 100vh;
+    margin: 0 auto;
+    padding-top: 280px;
+}
+main #info h1 {}
+main #info h1 img {margin-right: 50px;}
+main #info .personal {
+    display: flex; flex-flow: column nowrap;
+}
+main #info .personal h2 {
+    font-size: 2.5rem; font-weight: 300;
+    line-height: 50px;
+}
+main #info .personal h2 em {
+    font-size: 2.5rem; font-weight: 700;
+}
+main #info .personal h2 img {
+    padding: 57px 0 121px 0;
+}
+main #info .personal p {
+    line-height: 30px; font-size: 1.25rem;
+}
+main #info .line {}
+main #info .line span {
+    content: ''; display: block;
+    width: 1px; height: 464px; border: 1px dashed;
+    border-color: #aaa;
+    margin-left: 54px; margin-right: 54px;
+}
+main #info .txt {}
+main #info .txt h2 {
+    font-size: 1.625rem; font-weight: 700;
+    letter-spacing: -0.02em;  margin-bottom: 50px;
+}
+main #info .txt .log {}
+main #info .txt .log ul {margin-bottom: 68px;}
+main #info .txt .log li {
+    display: flex; flex-flow: row nowrap;
+    margin-bottom: 13px;
+}
+main #info .txt .log li >* {font-size: 1.4rem; letter-spacing: -0.02em;}
+main #info .txt .log li .date {margin-right: 50px;}
+main #info .txt .log li p {}
+main #info .txt .log dl dd {}
+/* 4. web redesign */
+main #web {height: 100vh;}
+main #web .title {
+    margin: 52px 0;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-self: center;
+}
+main #web .title h1 {
+    font-size: 1.875rem; font-weight: 700; letter-spacing: -0.02em;
+}
+main #web .title .btn {}
+main #web .title .btn a {
+    font-size: 1.25rem; font-weight: 500;
+    padding: 6px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    margin-right: 15px;
+    transition: all 0.3s;
+}
+main #web .title .btn>*:hover {
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.40);
+}
+main #web .title .btn a:last-child {
+    background-color: #4E4FEB;
+    margin-right: 0;
+}
+main #web .title .btn a span {
+    font-size: 1.25rem; font-weight: 500; color: #fff;
+}
+main #web .txt {}
+main #web .txt .project_info {
+    line-height: 36px;
+    font-weight: 300; font-size: 1.2rem; letter-spacing: -0.02em;
+}
+main #web .preview {margin-top: 80px;}
+main #web .preview img {margin-left: 350px;}
