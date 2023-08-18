@@ -2,4 +2,12 @@
     main #skills .container ul {height: 1100px;}
     /* main #skills .container ul li {width: 48%;} */
     /* main #info {max-width: calc(100% - 140px);} */
+    main #web .title .btn a {font-size: 1rem;}
+    main #web .title .btn a span {font-size: 1rem;}
+    main #web .title h1 {font-size: 1.2rem;}
+}
+@media screen and (max-width:1087px){
+    main #web .title .btn a {font-size: 0.6rem;}
+    main #web .title .btn a span {font-size: 0.6rem;}
+    main #web .title h1 {font-size: 0.8rem;}
 }

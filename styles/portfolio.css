@@ -1,3 +1,6 @@
+body, html {
+    scroll-behavior: smooth;
+}
 /* 반응형 대비 최소제한 너비 설정 */
 header, main {min-width: 900px;}
 /* header */
@@ -166,4 +169,7 @@ main #web .txt .project_info {
     font-weight: 300; font-size: 1.2rem; letter-spacing: -0.02em;
 }
 main #web .preview {margin-top: 80px;}
-main #web .preview img {margin-left: 350px;}
+main #web .preview img {
+    width: 80%;
+    margin-left: 55%; transform: translateX(-50%);
+}
