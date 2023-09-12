@@ -1,44 +1,38 @@
 body, html {
     scroll-behavior: smooth;
 }
+main {
+    /* overflow-x: hidden; */
+}
 /* 반응형 대비 최소제한 너비 설정 */
 header, main {min-width: 900px;}
 /* header */
 body {background: #F8F8F8;}
-header {
-    background-color: #F8F8F8;
-    position: fixed; left: 0; top: 0;
-    width: 100%; z-index: 999;
-    display: flex;
-    padding: 32px 60px 0px 60px;
-}
+/* header */
+header {}
 header nav {
-    width: 100%;
-    padding: 12px 0;
-    border: 2px solid #000;
-    border-left: 0; border-right: 0;
-    display: flex; flex-flow: nowrap;
-    justify-content: space-between;
+    position: fixed;
+    top: 50%; transform: translateY(-50%);
+    right: 30px; z-index: 9999;
 }
-header nav .gnb {}
+header nav .gnb {
+    display: flex; flex-flow: column nowrap;
+    align-items: center; background: #fff;
+    padding: 15px 8px; border-radius: 50px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
 header nav .gnb a {
-    margin-right: 40px;
-    letter-spacing: -0.02em; font-size: 1.25rem;
-    transition: color 0.3s;
+    padding-bottom: 40px;
 }
-header nav .gnb a:last-child {margin-right: 0;}
-header nav .gnb a:hover {
-    color: #4E4FEB;
+header nav .gnb a:last-child {
+    padding-bottom: 0;
 }
-header nav .sns {}
-header nav .sns span {
-    letter-spacing: -0.02em; font-size: 1.25rem;
-}
+header nav .gnb a img {}
 /* 1. home */
 main {}
 main > * {padding: 0 60px;}
 main #home {height: 100vh; text-align: center;}
-main #home h1 {padding-top: 279px;}
+main #home h1 {padding-top: 200px;}
 main #home h1 img {}
 main #home .mouse {
     position: absolute; left: 50%; bottom: 60px;
@@ -61,7 +55,7 @@ main #skills .container {}
 main #skills .container ul {
         /* 스킬 9개 수직 줄바꿈으로 배치하는 flex */
     display: flex; flex-flow: column wrap;
-    height: 800px;
+    height: 900px;
 }
 main #skills .container ul li {
     /* 아이콘 글자 옆으로 배치하는 flex */
@@ -75,7 +69,7 @@ main #skills .container ul li .icon {margin-right: 64px;}
 main #skills .container ul li .icon img {}
 main #skills .container ul li .contents {
     display: flex; flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: space-between; height: 100px;
 }
 main #skills .container ul li .contents .title {
     font-weight: 500;
@@ -85,6 +79,7 @@ main #skills .container ul li .contents .txt {
     letter-spacing: -0.02em; font-size: 1.25rem;
     font-weight: 300; line-height: 28px;
 }
+main #skills .container ul li .contents .txt {}
 /* 3. info */
 main #info {
     display: flex; flex-flow: row nowrap;
@@ -114,27 +109,30 @@ main #info .personal p {
 main #info .line {}
 main #info .line span {
     content: ''; display: block;
-    width: 1px; height: 464px; border: 1px dashed;
+    width: 1px; height: 510px; border: 1px dashed;
     border-color: #aaa;
     margin-left: 54px; margin-right: 54px;
 }
 main #info .txt {}
 main #info .txt h2 {
     font-size: 1.625rem; font-weight: 700;
-    letter-spacing: -0.02em;  margin-bottom: 50px;
+    letter-spacing: -0.02em;  margin-bottom: 30px;
 }
 main #info .txt .log {}
 main #info .txt .log ul {margin-bottom: 68px;}
 main #info .txt .log li {
     display: flex; flex-flow: row nowrap;
-    margin-bottom: 13px;
+    margin-bottom: 8px;
 }
 main #info .txt .log li >* {font-size: 1.4rem; letter-spacing: -0.02em;}
 main #info .txt .log li .date {margin-right: 50px;}
-main #info .txt .log li p {}
+main #info .txt .log li p {line-height: 30px;}
 main #info .txt .log dl dd {}
 /* 4. web redesign */
-main #web {height: 100vh;}
+main #web {}
+main #web .web_frm {height: 100vh;}
+main #uiux .web_frm {height: 100vh;}
+main #landing .web_frm {height: 100vh;}
 main #web .title {
     margin: 52px 0;
     display: flex; flex-flow: row nowrap;
@@ -168,8 +166,207 @@ main #web .txt .project_info {
     line-height: 36px;
     font-weight: 300; font-size: 1.2rem; letter-spacing: -0.02em;
 }
-main #web .preview {margin-top: 80px;}
+main #web .preview {margin-top: 40px;}
 main #web .preview img {
-    width: 80%;
-    margin-left: 55%; transform: translateX(-50%);
+    margin-left: 54%; transform: translateX(-50%);
+}
+/* 5. uiux */
+main #uiux {}
+main #uiux .title {
+    margin: 52px 0;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-self: center;
+}
+main #uiux .title h1 {
+    font-size: 1.875rem; font-weight: 700; letter-spacing: -0.02em;
+}
+main #uiux .title .btn {}
+main #uiux .title .btn a {
+    font-size: 1.25rem; font-weight: 500;
+    padding: 6px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    margin-right: 15px;
+    transition: all 0.3s;
+}
+main #uiux .title .btn>*:hover {
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.40);
+}
+main #uiux .title .btn a:last-child {
+    background-color: #4E4FEB;
+    margin-right: 0;
+}
+main #uiux .title .btn a span {
+    font-size: 1.25rem; font-weight: 500; color: #fff;
+}
+main #uiux .txt {}
+main #uiux .txt .project_info {
+    line-height: 36px;
+    font-weight: 300; font-size: 1.2rem; letter-spacing: -0.02em;
+}
+main #uiux .preview {margin-top: 40px;}
+main #uiux .preview img {
+    width: 55%;
+    margin-left: 54%; transform: translateX(-50%);
+}
+/* 6. landing */
+main #landing {}
+main #landing .title {
+    margin: 52px 0;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-self: center;
+}
+main #landing .title h1 {
+    font-size: 1.875rem; font-weight: 700; letter-spacing: -0.02em;
+}
+main #landing .title .btn {}
+main #landing .title .btn a {
+    font-size: 1.25rem; font-weight: 500;
+    padding: 6px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    margin-right: 15px;
+    transition: all 0.3s;
+}
+main #landing .title .btn>*:hover {
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.40);
+}
+main #landing .title .btn a:last-child {
+    background-color: #4E4FEB;
+    margin-right: 0;
+}
+main #landing .title .btn a span {
+    font-size: 1.25rem; font-weight: 500; color: #fff;
+}
+main #landing .txt {}
+main #landing .txt .project_info {
+    line-height: 36px;
+    font-weight: 300; font-size: 1.2rem; letter-spacing: -0.02em;
+}
+main #landing .preview {margin-top: 40px;}
+main #landing .preview img {
+    margin-left: 54%; transform: translateX(-50%);
+}
+/* 7. 상세페이지 */
+main #page {}
+main #page .title {
+    margin: 52px 0;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-self: center;
+}
+main #page .title h1 {
+    font-size: 1.875rem; font-weight: 700; letter-spacing: -0.02em;
+}
+main #page .title .btn {}
+main #page .title .btn a {
+    font-size: 1.25rem; font-weight: 500;
+    padding: 6px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    margin-right: 15px;
+    transition: all 0.3s;
+}
+main #page .title .btn>*:hover {
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.40);
+}
+main #page .title .btn a:last-child {
+    background-color: #4E4FEB;
+    margin-right: 0;
+}
+main #page .title .btn a span {
+    font-size: 1.25rem; font-weight: 500; color: #fff;
+}
+main #page .txt {}
+main #page .txt .project_info {
+    line-height: 36px;
+    font-weight: 300; font-size: 1.2rem; letter-spacing: -0.02em;
+}
+main #page .preview {margin-top: 40px;}
+main #page .preview img {
+    margin-left: 46%; transform: translateX(-50%);
+}
+/* 8. sns */
+main #sns {height: 100vh;
+    display: flex; flex-flow: column nowrap;
+    justify-content: center;
+}
+main #sns .title {text-align: center;}
+main #sns .title p {font-size: 1.25rem; font-weight: 300;
+    letter-spacing: -0.02em; padding-bottom: 42px;}
+main #sns .title h1 {font-size: 3rem; font-weight: 700;
+    letter-spacing: -0.02em; padding-bottom: 100px;}
+main #sns #sns_s {}
+main #sns #sns_s .sns_w {}
+main #sns #sns_s .sns_w a {}
+main #sns #sns_s .sns_w a .swiper-slide {}
+/* 개별 슬라이드 */
+main #sns #sns_s .sns_w a .slider1 {}
+main #sns #sns_s .sns_w a .slider2 {}
+main #sns #sns_s .sns_w a .slider3 {}
+main #sns #sns_s .sns_w a .slider4 {}
+main #sns #sns_s .sns_w a .slider5 {}
+main #sns #sns_s .sns_w a .slider6 {}
+main #sns #sns_s .sns_w a .slider7 {}
+main #sns #sns_s .sns_w a .slider8 {}
+main #sns #sns_s .sns_w a .slider9 {}
+/* 스와이퍼 버튼 */
+main #sns .swiper .swiper-button-prev::after,
+main #sns .swiper .swiper-button-next::after {display: none;}
+main #sns .swiper .swiper-button-prev {
+    background: url(../images/prev.png);
+    background-repeat: no-repeat;
+    top: 60%; transform: translateY(-50%);
+}
+
+main #sns .swiper .swiper-button-next {
+    background: url(../images/next.png);
+    background-repeat: no-repeat;
+    top: 60%; transform: translateY(-50%);
+}
+/* 9. card */
+main #card {height: 100vh;
+    display: flex; flex-flow: column nowrap;
+    justify-content: center;
+}
+main #card .title {
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+}
+main #card .title p {
+    font-size: 1.25rem; font-weight: 300;
+    letter-spacing: -0.02em;}
+main #card .title h1 {font-size: 3rem; font-weight: 700;
+    letter-spacing: -0.02em; padding: 42px 0;}
+main #card .title .btn {}
+main #card .title .btn button {
+    font-weight: 700; font-size: 1.25rem;
+    padding: 5px 20px; background-color: #fff; color: #000;
+    border-radius: 50px; margin-right: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+}
+main #card .title .btn button:hover {
+    background-color: #4E4FEB; color: #fff;
+}
+main #card .title .btn a:last-child {
+    margin-right: 0px;
+}
+main #card ul {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center; margin-top: 62px;
+}
+main #card ul li {margin-right: 20px;}
+main #card ul li:last-child {margin-right: 0px;}
+main #card ul li a {}
+main #card ul li a img {}
+/* 10. edit */
+main #edit {
+    display: flex; flex-flow: column nowrap;
+    justify-content: center; align-items: center;
+}
+main #edit ul {
+    padding: 60px 0;
 }
