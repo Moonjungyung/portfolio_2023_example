@@ -11,17 +11,25 @@
     <!-- style -->
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/portfolio.css">
-    <link rel="stylesheet" href="./styles/portfolio_responsive.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="gnb">
-                <a href="#home"><img src="./images/main.png" alt="" title="main"></a>
-                <a href="#info"><img src="./images/badge.png" alt="" title="infomation"></a>
-                <a href="#web"><img src="./images/desktop.png" alt="" title="web design"></a>
-                <a href="#sns"><img src="./images/draw.png" alt="" title="ect design"></a>
-                <a href="#edit"><img src="./images/bookmark_manager.png" alt="" title="edit design"></a>
+                <a href="#home">
+                    <img src="./images/main.png" id="home_on" alt=""><span>메인</span>
+                </a>
+                <a href="#info">
+                    <img src="./images/badge.png" alt=""><span>스킬</span>
+                </a>
+                <a href="#table"><img src="./images/desktop.png" alt=""><span>작업</span>
+                </a>
+                <a href="#sns">
+                    <img src="./images/draw.png" alt=""><span>ECT</span>
+                </a>
+                <a href="#table_edit">
+                    <img src="./images/bookmark.png" alt=""><span>편집</span>
+                </a>
             </div>
         </nav>
     </header>
@@ -162,7 +170,32 @@
                 </div>
             </div>
         </section>
-        <!-- 4. web redesign -->
+        <!-- 목차 -->
+        <section id="table">
+            <div class="title">
+                <p>MAIN DESIGN</p>
+                <h1>웹 / UIUX / LANDING / 상세페이지 디자인</h1>
+            </div>
+            <div class="contents">
+                <ul>
+                    <li><img src="./images/table1-1.png" alt=""></li>
+                    <li><a href="#web">WEB</a></li>
+                </ul>
+                <ul>
+                    <li><img src="./images/table1-2.png" alt=""></li>
+                    <li><a href="#uiux">UIUX</a></li>
+                </ul>
+                <ul>
+                    <li><img src="./images/table1-3.png" alt=""></li>
+                    <li><a href="#landing">LANDING</a></li>
+                </ul>
+                <ul>
+                    <li><img src="./images/table1-4.png" alt=""></li>
+                    <li><a href="#page">상세 페이지</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- 4. web -->
         <section id="web">
             <div class="web_frm">
                 <div class="title">
@@ -210,7 +243,7 @@
                 <div class="title">
                     <h1>WEB : DESIGN { 놀음 }</h1>
                     <div class="btn">
-                        <a href="https://url.kr/vt5e34" target="_blank">와이어프레임/프로토타입 보기</a>
+                        <a href="" target="_blank">와이어프레임/프로토타입 보기</a>
                         <a href="http://moon1126.pe.kr/nol-eum/index.html" target="_blank"><span>최종 프로젝트 결과 보기</span></a>
                     </div>
                 </div>
@@ -414,10 +447,11 @@
                     <div class="swiper-slide slider7"><a href="#"><img src="./images/sns_7.png" alt=""></a></div>
                     <div class="swiper-slide slider8"><a href="#"><img src="./images/sns_8.png" alt=""></a></div>
                     <div class="swiper-slide slider9"><a href="#"><img src="./images/sns_9.png" alt=""></a></div>
+                    <div class="swiper-slide slider10"><a href="#"><img src="./images/sns_10.png" alt=""></a></div>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </section>
         <!-- 9. card -->
         <section id="card">
@@ -449,12 +483,37 @@
                 <li><a href="#"><img src="images/card3_04.png" alt=""></a></li>
             </ul>
         </section>
+        <!-- 목차 -->
+        <section id="table_edit">
+            <div class="title">
+                <p>MAIN DESIGN</p>
+                <h1>웹 / UIUX / LANDING / 상세페이지 디자인</h1>
+            </div>
+            <div class="contents">
+                <ul>
+                    <li><img src="./images/table2-1.png" alt=""></li>
+                    <li><a href="#poster">POSTER</a></li>
+                </ul>
+                <ul>
+                    <li><img src="./images/table2-2.png" alt=""></li>
+                    <li><a href="#package">PACKAGE</a></li>
+                </ul>
+                <ul>
+                    <li><img src="./images/table2-3.png" alt=""></li>
+                    <li><a href="#book">BOOK</a></li>
+                </ul>
+                <ul>
+                    <li><img src="./images/table2-4.png" alt=""></li>
+                    <li><a href="#character">CHARACTER</a></li>
+                </ul>
+            </div>
+        </section>
         <!-- 10. 편집디자인 -->
         <section id="edit">
-            <ul class="poster">
+            <ul id="poster">
                 <li><img src="./images/poster.png" alt=""></li>
             </ul>
-            <ul class="package">
+            <ul id="package">
                 <li><img src="./images/package1.png" alt=""></li>
                 <li><img src="./images/package2-1.png" alt=""></li>
                 <li><img src="./images/package2-2.png" alt=""></li>
@@ -462,10 +521,10 @@
                 <li><img src="./images/package2-4.png" alt=""></li>
                 <li><img src="./images/package2-5.png" alt=""></li>
             </ul>
-            <ul class="book">
+            <ul id="book">
                 <li><img src="./images/book1.png" alt=""></li>
             </ul>
-            <ul class="character">
+            <ul id="character">
                 <li><img src="./images/character1-1.png" alt=""></li>
                 <li><img src="./images/character1-2.png" alt=""></li>
                 <li><img src="./images/character2.png" alt=""></li>
@@ -486,8 +545,8 @@
         disableOnInteraction:false,
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: "#sns .swiper-button-next",
+        prevEl: "#sns .swiper-button-prev",
     },
     loop:true,
     loopAdditionalSlides : 1,

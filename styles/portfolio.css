@@ -1,5 +1,7 @@
 body, html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    min-width: 1920px;
 }
 main {
     /* overflow-x: hidden; */
@@ -22,12 +24,22 @@ header nav .gnb {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 }
 header nav .gnb a {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+}
+header nav .gnb a span {
+    font-weight: 700; padding-top: 5px;
+}
+header nav .gnb a:hover {
+    filter: invert(29%) sepia(25%) saturate(6481%) hue-rotate(231deg) brightness(93%) contrast(98%);
 }
 header nav .gnb a:last-child {
     padding-bottom: 0;
 }
-header nav .gnb a img {}
+header nav .gnb a img {
+    color: #4E4FEB;
+}
 /* 1. home */
 main {}
 main > * {padding: 0 60px;}
@@ -80,6 +92,41 @@ main #skills .container ul li .contents .txt {
     font-weight: 300; line-height: 28px;
 }
 main #skills .container ul li .contents .txt {}
+/* 목차 */
+main #table {}
+main #table .title {
+    text-align: center; padding-bottom: 88px;
+    padding: 140px 0 88px 0 ;
+}
+main #table .title p {
+    font-size: 1.875rem; font-weight: 300; padding-bottom: 42px;
+}
+main #table .title h1 {
+    font-size: 3.125rem; font-weight: 700;
+}
+main #table .contents {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center; padding-bottom: 240px;
+}
+main #table .contents ul {
+    margin-right: 16px;
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+}
+main #table .contents ul:last-child {
+    margin-right: 0;
+}
+main #table .contents ul li {}
+main #table .contents ul li img {}
+main #table .contents ul li a {
+    font-size: 1.25rem; padding: 5px 20px;  font-weight: 700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px; background-color: #fff;
+    transition: all 0.3s;
+}
+main #table .contents ul li a:hover {
+    background-color: #4E4FEB; color: #fff;
+}
 /* 3. info */
 main #info {
     display: flex; flex-flow: row nowrap;
@@ -289,16 +336,16 @@ main #page .preview img {
     margin-left: 46%; transform: translateX(-50%);
 }
 /* 8. sns */
-main #sns {height: 100vh;
+main #sns {height: 100vh; 
     display: flex; flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: center; position: relative;
 }
 main #sns .title {text-align: center;}
 main #sns .title p {font-size: 1.25rem; font-weight: 300;
     letter-spacing: -0.02em; padding-bottom: 42px;}
 main #sns .title h1 {font-size: 3rem; font-weight: 700;
     letter-spacing: -0.02em; padding-bottom: 100px;}
-main #sns #sns_s {}
+main #sns #sns_s {width: 1380px;}
 main #sns #sns_s .sns_w {}
 main #sns #sns_s .sns_w a {}
 main #sns #sns_s .sns_w a .swiper-slide {}
@@ -313,18 +360,18 @@ main #sns #sns_s .sns_w a .slider7 {}
 main #sns #sns_s .sns_w a .slider8 {}
 main #sns #sns_s .sns_w a .slider9 {}
 /* 스와이퍼 버튼 */
-main #sns .swiper .swiper-button-prev::after,
-main #sns .swiper .swiper-button-next::after {display: none;}
-main #sns .swiper .swiper-button-prev {
+main #sns .swiper-button-prev::after,
+main #sns .swiper-button-next::after {display: none;}
+main #sns .swiper-button-prev {
     background: url(../images/prev.png);
     background-repeat: no-repeat;
-    top: 60%; transform: translateY(-50%);
+    top: 65%; transform: translateY(-50%); left: 10%;
 }
 
-main #sns .swiper .swiper-button-next {
+main #sns .swiper-button-next {
     background: url(../images/next.png);
     background-repeat: no-repeat;
-    top: 60%; transform: translateY(-50%);
+    top: 65%; transform: translateY(-50%); right: 10%;
 }
 /* 9. card */
 main #card {height: 100vh;
@@ -362,11 +409,47 @@ main #card ul li {margin-right: 20px;}
 main #card ul li:last-child {margin-right: 0px;}
 main #card ul li a {}
 main #card ul li a img {}
+/* 목차 - 편집 */
+main #table_edit {}
+main #table_edit .title {
+    text-align: center; padding-bottom: 88px;
+    padding: 140px 0 88px 0 ;
+}
+main #table_edit .title p {
+    font-size: 1.875rem; font-weight: 300; padding-bottom: 42px;
+}
+main #table_edit .title h1 {
+    font-size: 3.125rem; font-weight: 700;
+}
+main #table_edit .contents {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center; padding-bottom: 240px;
+}
+main #table_edit .contents ul {
+    margin-right: 16px;
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+}
+main #table_edit .contents ul:last-child {
+    margin-right: 0;
+}
+main #table_edit .contents ul li {}
+main #table_edit .contents ul li:first-child {
+    padding-bottom: 20px;
+}
+main #table_edit .contents ul li img {}
+main #table_edit .contents ul li a {
+    font-size: 1.25rem; padding: 5px 20px;  font-weight: 700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px; background-color: #fff;
+    transition: all 0.3s;
+}
+main #table_edit .contents ul li a:hover {
+    background-color: #4E4FEB; color: #fff;
+}
 /* 10. edit */
 main #edit {
     display: flex; flex-flow: column nowrap;
     justify-content: center; align-items: center;
 }
-main #edit ul {
-    padding: 60px 0;
-}
+main #edit ul {}
