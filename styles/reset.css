@@ -9,7 +9,7 @@ div,header,nav,aside,main,footer,
 article,figure,figcaption,section,video,
 table,thead,tbody,tfoot,tr,th,ul,ol,li,dt,dd,
 form,fieldset,legend,input,select,option,button,label,textarea {
-    font-family: 'pretendard', sans-serif;
+    font-family: 'Pretendard', sans-serif;
     margin:0; padding: 0; line-height: 1.0;
     font-size: 16px; font-style: normal; font-weight: normal;
     text-decoration: none;
