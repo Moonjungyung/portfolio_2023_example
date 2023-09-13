@@ -3,9 +3,7 @@ body, html {
     overflow-x: hidden;
     min-width: 1920px;
 }
-main {
-    /* overflow-x: hidden; */
-}
+main {}
 /* 반응형 대비 최소제한 너비 설정 */
 header, main {min-width: 900px;}
 /* header */
@@ -42,7 +40,7 @@ header nav .gnb a img {
 }
 /* 1. home */
 main {}
-main > * {padding: 0 60px;}
+main > * {padding: 0 120px;}
 main #home {height: 100vh; text-align: center;}
 main #home h1 {padding-top: 200px;}
 main #home h1 img {}
@@ -72,7 +70,7 @@ main #skills .container ul {
 main #skills .container ul li {
     /* 아이콘 글자 옆으로 배치하는 flex */
     display: flex; flex-flow: row nowrap;
-    width: calc(50% - 60px /2); margin-bottom: 70px;
+    width: calc(56% - 500px /2); margin-bottom: 50px;
 }
 main #skills .container ul li:nth-child(odd) {
     margin-right: 60px;
@@ -81,10 +79,10 @@ main #skills .container ul li .icon {margin-right: 64px;}
 main #skills .container ul li .icon img {}
 main #skills .container ul li .contents {
     display: flex; flex-flow: column nowrap;
-    justify-content: space-between; height: 100px;
+    justify-content: space-between;
 }
 main #skills .container ul li .contents .title {
-    font-weight: 500;
+    font-weight: 700; padding-bottom: 10px;
     letter-spacing: -0.02em; font-size: 1.25rem;
 }
 main #skills .container ul li .contents .txt {
@@ -108,7 +106,7 @@ main #table .contents {
     display: flex; flex-flow: row nowrap;
     justify-content: center; padding-bottom: 240px;
 }
-main #table .contents ul {
+main #table .contents a {
     margin-right: 16px;
     display: flex; flex-flow: column nowrap;
     align-items: center;
@@ -118,13 +116,13 @@ main #table .contents ul:last-child {
 }
 main #table .contents ul li {}
 main #table .contents ul li img {}
-main #table .contents ul li a {
+main #table .contents a span {
     font-size: 1.25rem; padding: 5px 20px;  font-weight: 700;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 100px; background-color: #fff;
     transition: all 0.3s;
 }
-main #table .contents ul li a:hover {
+main #table .contents a span:hover {
     background-color: #4E4FEB; color: #fff;
 }
 /* 3. info */
@@ -171,25 +169,32 @@ main #info .txt .log li {
     display: flex; flex-flow: row nowrap;
     margin-bottom: 8px;
 }
-main #info .txt .log li >* {font-size: 1.4rem; letter-spacing: -0.02em;}
+main #info .txt .log li >* {font-size: 1.2rem; letter-spacing: -0.02em;}
 main #info .txt .log li .date {margin-right: 50px;}
 main #info .txt .log li p {line-height: 30px;}
 main #info .txt .log dl dd {}
-/* 4. web redesign */
-main #web {}
-main #web .web_frm {height: 100vh;}
-main #uiux .web_frm {height: 100vh;}
-main #landing .web_frm {height: 100vh;}
+/* 4,6. web, landing redesign */
+main #landing,
+main #web {background: linear-gradient(180deg, rgba(248,248,248,1) 0%, rgba(222,222,222,1) 15%, rgba(222,222,222,1) 50%, rgba(222,222,222,1) 85%, rgba(248,248,248,1) 100%);}
+main #web .web_frm,
+main #landing .web_frm {
+    height: 100vh;
+    display: flex; flex-flow: row wrap;
+}
+main #landing .title,
 main #web .title {
     margin: 52px 0;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
     align-self: center;
+    width: 100%;
 }
+main #landing .title h1,
 main #web .title h1 {
     font-size: 1.875rem; font-weight: 700; letter-spacing: -0.02em;
 }
-main #web .title .btn {}
+main #landing .title .btn a,
+main #uiux .title .btn a,
 main #web .title .btn a {
     font-size: 1.25rem; font-weight: 500;
     padding: 6px 20px;
@@ -198,32 +203,49 @@ main #web .title .btn a {
     margin-right: 15px;
     transition: all 0.3s;
 }
+main #landing .title .btn>*:hover,
 main #web .title .btn>*:hover {
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.40);
 }
+main #landing .title .btn a:last-child,
 main #web .title .btn a:last-child {
     background-color: #4E4FEB;
     margin-right: 0;
 }
+main #landing .title .btn a span,
 main #web .title .btn a span {
     font-size: 1.25rem; font-weight: 500; color: #fff;
 }
-main #web .txt {}
+main #landing .txt,
+main #web .txt {width: 40%;}
+
+main #page .txt .project_info span,
+main #uiux .txt .project_info span,
+main #web .txt .project_info span,
+main #landing .txt .project_info span {
+    font-weight: 700;  font-size: 1.2rem;
+}
+main #landing .txt .project_info,
 main #web .txt .project_info {
-    line-height: 36px;
+    line-height: 40px;  width: 90%;
     font-weight: 300; font-size: 1.2rem; letter-spacing: -0.02em;
 }
-main #web .preview {margin-top: 40px;}
+main #landing .preview img,
 main #web .preview img {
-    margin-left: 54%; transform: translateX(-50%);
+    margin-left: 60%; transform: translateX(-50%);
+    width: 90%;
 }
 /* 5. uiux */
 main #uiux {}
+main #uiux .web_frm {
+    height: 100vh;
+    display: flex; flex-flow: row wrap;
+}
 main #uiux .title {
     margin: 52px 0;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
-    align-self: center;
+    align-self: center; width: 100%;
 }
 main #uiux .title h1 {
     font-size: 1.875rem; font-weight: 700; letter-spacing: -0.02em;
@@ -247,62 +269,24 @@ main #uiux .title .btn a:last-child {
 main #uiux .title .btn a span {
     font-size: 1.25rem; font-weight: 500; color: #fff;
 }
-main #uiux .txt {}
+main #uiux .txt {width: 36%;}
 main #uiux .txt .project_info {
-    line-height: 36px;
+    line-height: 36px; width: 90%;
     font-weight: 300; font-size: 1.2rem; letter-spacing: -0.02em;
 }
-main #uiux .preview {margin-top: 40px;}
+main #uiux .preview {}
 main #uiux .preview img {
-    width: 55%;
-    margin-left: 54%; transform: translateX(-50%);
-}
-/* 6. landing */
-main #landing {}
-main #landing .title {
-    margin: 52px 0;
-    display: flex; flex-flow: row nowrap;
-    justify-content: space-between;
-    align-self: center;
-}
-main #landing .title h1 {
-    font-size: 1.875rem; font-weight: 700; letter-spacing: -0.02em;
-}
-main #landing .title .btn {}
-main #landing .title .btn a {
-    font-size: 1.25rem; font-weight: 500;
-    padding: 6px 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.20);
-    border-radius: 10px;
-    margin-right: 15px;
-    transition: all 0.3s;
-}
-main #landing .title .btn>*:hover {
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.40);
-}
-main #landing .title .btn a:last-child {
-    background-color: #4E4FEB;
-    margin-right: 0;
-}
-main #landing .title .btn a span {
-    font-size: 1.25rem; font-weight: 500; color: #fff;
-}
-main #landing .txt {}
-main #landing .txt .project_info {
-    line-height: 36px;
-    font-weight: 300; font-size: 1.2rem; letter-spacing: -0.02em;
-}
-main #landing .preview {margin-top: 40px;}
-main #landing .preview img {
-    margin-left: 54%; transform: translateX(-50%);
+    width: 90%;
+    margin-left: 40%; transform: translateX(-20%);
 }
 /* 7. 상세페이지 */
 main #page {}
+main #page .web_frm {display: flex; flex-flow: row wrap; height: 100vh;}
 main #page .title {
     margin: 52px 0;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
-    align-self: center;
+    align-self: center; width: 100%;
 }
 main #page .title h1 {
     font-size: 1.875rem; font-weight: 700; letter-spacing: -0.02em;
@@ -326,14 +310,14 @@ main #page .title .btn a:last-child {
 main #page .title .btn a span {
     font-size: 1.25rem; font-weight: 500; color: #fff;
 }
-main #page .txt {}
+main #page .txt {width: 28%;}
 main #page .txt .project_info {
     line-height: 36px;
     font-weight: 300; font-size: 1.2rem; letter-spacing: -0.02em;
 }
 main #page .preview {margin-top: 40px;}
 main #page .preview img {
-    margin-left: 46%; transform: translateX(-50%);
+    margin-left: 84%; transform: translateX(-50%);
 }
 /* 8. sns */
 main #sns {height: 100vh; 
@@ -425,7 +409,7 @@ main #table_edit .contents {
     display: flex; flex-flow: row nowrap;
     justify-content: center; padding-bottom: 240px;
 }
-main #table_edit .contents ul {
+main #table_edit .contents a {
     margin-right: 16px;
     display: flex; flex-flow: column nowrap;
     align-items: center;
@@ -434,17 +418,14 @@ main #table_edit .contents ul:last-child {
     margin-right: 0;
 }
 main #table_edit .contents ul li {}
-main #table_edit .contents ul li:first-child {
-    padding-bottom: 20px;
-}
 main #table_edit .contents ul li img {}
-main #table_edit .contents ul li a {
+main #table_edit .contents a span {
     font-size: 1.25rem; padding: 5px 20px;  font-weight: 700;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 100px; background-color: #fff;
-    transition: all 0.3s;
+    transition: all 0.3s; margin-top: 10px;
 }
-main #table_edit .contents ul li a:hover {
+main #table_edit .contents  a span :hover {
     background-color: #4E4FEB; color: #fff;
 }
 /* 10. edit */
