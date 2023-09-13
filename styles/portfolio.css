@@ -452,4 +452,6 @@ main #edit {
     display: flex; flex-flow: column nowrap;
     justify-content: center; align-items: center;
 }
-main #edit ul {}
+main #edit ul {
+    padding-bottom: 150px;
+}
