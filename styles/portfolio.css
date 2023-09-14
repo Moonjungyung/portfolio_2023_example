@@ -122,6 +122,7 @@ main #table .contents a span {
     border-radius: 100px; background-color: #fff;
     transition: all 0.3s;
 }
+main #table .contents a:hover span,
 main #table .contents a span:hover {
     background-color: #4E4FEB; color: #fff;
 }
@@ -174,6 +175,11 @@ main #info .txt .log li .date {margin-right: 50px;}
 main #info .txt .log li p {line-height: 30px;}
 main #info .txt .log dl dd {}
 /* 4,6. web, landing redesign */
+.web_frm::after {
+    content: ''; display: block;
+    width: 50%; height: 1px; margin: 0 auto;
+    background-color: #C6C6C6; margin-top: 40px;
+}
 main #landing,
 main #web {background: linear-gradient(180deg, rgba(248,248,248,1) 0%, rgba(222,222,222,1) 15%, rgba(222,222,222,1) 50%, rgba(222,222,222,1) 85%, rgba(248,248,248,1) 100%);}
 main #web .web_frm,
@@ -201,7 +207,7 @@ main #web .title .btn a {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
     margin-right: 15px;
-    transition: all 0.3s;
+    transition: all 0.3s; background-color: #fff;
 }
 main #landing .title .btn>*:hover,
 main #web .title .btn>*:hover {
@@ -298,7 +304,7 @@ main #page .title .btn a {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
     margin-right: 15px;
-    transition: all 0.3s;
+    transition: all 0.3s; background-color: #fff;
 }
 main #page .title .btn>*:hover {
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.40);
@@ -357,6 +363,13 @@ main #sns .swiper-button-next {
     background-repeat: no-repeat;
     top: 65%; transform: translateY(-50%); right: 10%;
 }
+/* js 팝업 */
+main .sns_popup {
+    position:fixed; left:0; top:0; z-index:999;
+    transform: translateY(-50%) translateX(-50%); top: 50%; left: 52%;
+}
+main .sns_popup .view {}
+main .sns_popup .view img {width: 90%}
 /* 9. card */
 main #card {height: 100vh;
     display: flex; flex-flow: column nowrap;
@@ -393,6 +406,12 @@ main #card ul li {margin-right: 20px;}
 main #card ul li:last-child {margin-right: 0px;}
 main #card ul li a {}
 main #card ul li a img {}
+/* 카드 팝업 */
+main .card_popup {
+    position:fixed; left:0; top:0; z-index:998;
+    transform: translateY(-50%) translateX(-50%); top: 50%; left: 52%;
+}
+main .card_popup .view img {width: 90%}
 /* 목차 - 편집 */
 main #table_edit {}
 main #table_edit .title {
@@ -425,7 +444,8 @@ main #table_edit .contents a span {
     border-radius: 100px; background-color: #fff;
     transition: all 0.3s; margin-top: 10px;
 }
-main #table_edit .contents  a span :hover {
+main #table_edit .contents a:hover span,
+main #table_edit .contents a span :hover {
     background-color: #4E4FEB; color: #fff;
 }
 /* 10. edit */

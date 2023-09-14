@@ -449,6 +449,7 @@
                     <div class="swiper-slide slider9"><a href="#"><img src="./images/sns_9.png" alt=""></a></div>
                     <div class="swiper-slide slider10"><a href="#"><img src="./images/sns_10.png" alt=""></a></div>
                 </div>
+                <div class="sns_popup"><div class="view"><img src="" alt=""></div></div>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -482,6 +483,7 @@
                 <li><a href="#"><img src="images/card3_03.png" alt=""></a></li>
                 <li><a href="#"><img src="images/card3_04.png" alt=""></a></li>
             </ul>
+            <div class="card_popup"><div class="view"><img src="" alt=""></div></div>
         </section>
         <!-- 목차 -->
         <section id="table_edit">
@@ -544,6 +546,41 @@
     observer: true,
     observeParents: true,
 })
+
+    let sns_popup = document.querySelector('.sns_popup')
+    let sns_popup_img = document.querySelector('.sns_popup img')
+    let sns_list = document.querySelectorAll('.sns_w a')
+    console.log(sns_popup,sns_list,sns_popup_img)
+    sns_popup.style.display = 'none'
+
+    sns_list.forEach(function(t,i,a){
+        console.log(t,i,a)
+        t.addEventListener('click',function(e){
+            e.preventDefault()
+            sns_popup.style.display='block'
+            sns_popup_img.src = `./images/s_popup_${i+1}.jpg`
+        })
+    })
+    sns_popup.addEventListener('click',function(){
+        sns_popup.style.display = 'none'
+    })
+
+    let card_popup = document.querySelector('.card_popup')
+    let card_popup_img = document.querySelector('.card_popup img')
+    let card_list = document.querySelectorAll('#card a')
+    card_popup.style.display = 'none'
+
+    card_list.forEach(function(target, index, array){
+        console.log(target,index,array)
+        target.addEventListener('click',function(e){
+            e.preventDefault()
+            card_popup.style.display = 'block'
+            card_popup_img.src = `./images/c_popup_${index+1}.jpg`
+        })
+    })
+    card_popup.addEventListener('click',function(){
+        card_popup.style.display = 'none'
+    })
     </script>
 </body>
 </html>
